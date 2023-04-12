@@ -23,6 +23,25 @@
     border-radius: 25px;
 }
 
+.poster{
+    text-align: left;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.input__poster{
+    width: 72%;
+    height: 2.5rem;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+}
+.type{
+    height: 2.3rem;
+    width: 25%;
+    border-radius: 8px;
+}
+
 /* Medium Screen */
 @media(min-width: 768px){
     .container{
@@ -40,6 +59,9 @@
     }
     .Addmovie__right{
         flex-basis: 40%;
+    }
+    .input__poster{
+        margin-right: 0.5rem;
     }
 }
 .inputtitle{

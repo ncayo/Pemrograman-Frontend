@@ -1,13 +1,11 @@
 import Movie from "../Movie/Movie";
 import styles from "./Movies.module.css";
-// import data movie
-import data from "../utils/constants/data";
-import { useState } from "react";
 import { nanoid } from "nanoid";
 
-function Movies() {
-  //Membuat variable state: movies
-  const [movies, setMovies]= useState(data);
+function Movies(props) {
+
+  // Destructing props : state movies
+  const {movies, setMovies} = props;
 
   // Membuat fungsi tambah film
   // dijalankan ketika tombol diklik
