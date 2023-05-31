@@ -20,7 +20,7 @@ function Movies(props) {
 
     // Menambahkan movie ke state movies
     // spread operatir : copy dan merge array
-    setMovies([...movies,movie])
+    setMovies([...movies,movie]);
   }
   
   return (

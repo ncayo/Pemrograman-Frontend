@@ -2,6 +2,7 @@ import { nanoid } from "nanoid";
 import { useState } from "react";
 import styles from "./AddMovieForm.module.css"
 import Alert from "../Alert/Alert";
+import Button from "../ui/Button";
 
 // Menangkap props
 function AddMovieForm(props){ 
@@ -114,7 +115,7 @@ function handleSubmit(e){
                           {isSalah.type ? ( <Alert>Type Wajib Diisi</Alert>) : "" }
                         </div>
                         <br/>
-                        <button type="submit" className={styles.button}>Submit</button>
+                        <Button full>Submit</Button>
                     </form>
                 </div>
             </section>
