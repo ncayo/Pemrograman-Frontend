@@ -18,8 +18,6 @@
     display: flex;
     flex-direction: column;
   }
-  
-  
   /* Medium Screen */
   @media (min-width: 768px) {
     .movie__container {

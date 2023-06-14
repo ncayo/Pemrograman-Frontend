@@ -33,6 +33,9 @@ Link{
     color: #f1ca89;
     text-decoration: none;
 }
+a {
+  text-decoration: none;
+}
 
 /* Medium Screen */
   @media (min-width: 768px) {

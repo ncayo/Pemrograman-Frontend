@@ -2,8 +2,8 @@ import { css } from "styled-components";
 const theme = {
     // Color Theme
     colors: {
-        primary: "#431ee",
-        secondary: "green",
+        primary: "#f1ca89",
+        secondary: "#68a19b",
     },
 
     sizebutton:{

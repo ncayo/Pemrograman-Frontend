@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 function Movies(props) {
 
   // Destructing props : state movies
-  const {movies, setMovies} = props;
+  const { title ,movies, setMovies} = props;
 
   // Membuat fungsi tambah film
   // dijalankan ketika tombol diklik
@@ -24,9 +24,10 @@ function Movies(props) {
   }
   
   return (
+  <div>
     <div className={styles.container}>
       <section className={styles.movies}>
-        <h2 className={styles.movies__title}>Latest Movies</h2>
+        <h2 className={styles.movies__title}>{title}</h2>
         <div className={styles.movie__container}>
           {/* 
           * looping data movies : map
@@ -43,6 +44,7 @@ function Movies(props) {
         <button onClick={tambahFilm}>Add Movie</button>
       </section>
     </div>
+  </div>
   );
 }
 

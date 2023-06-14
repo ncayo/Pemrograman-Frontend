@@ -1,4 +1,5 @@
-import styles from "./Movie.module.css"
+import { Link } from "react-router-dom";
+import StyledMovie from "./StyledMovie";
 
 
 // Tanggap props
@@ -7,11 +8,13 @@ function Movie(props){
     const {movie} = props;
 
     return(
-        <div className={styles.movie}>
-            <img className={styles.movie__image} src={movie.poster} alt=""/>
-            <h3 className={styles.movie__title}>{movie.title}</h3>
-            <p className={styles.movie__date}>{movie.year}</p>
-          </div>
+        <StyledMovie>
+            <img src={movie.poster || `https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt=""/>
+            <Link to={`/movie/${movie.id}`}>
+            <h3>{movie.title}</h3>
+            </Link>
+            <p>{movie.year}</p>
+          </StyledMovie>
     );
 }
 export default Movie;

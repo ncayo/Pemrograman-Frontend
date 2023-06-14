@@ -12,8 +12,9 @@ import styled, { css } from "styled-components";
     border: none;
     border-radius: 10px;
     color: #fff;
-    background-color: #431ee;
+    background-color: #f1ca89;
     cursor: pointer;
+    
 
     /**
      * Menangkap Props variant

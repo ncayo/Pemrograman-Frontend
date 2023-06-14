@@ -10,6 +10,7 @@ import Layout from "./Layout";
 
 import theme from "./components/utils/constants/theme";
 import { ThemeProvider } from "styled-components";
+import Detail from "./pages/movie/Detail";
 
 
 function App() {
@@ -21,8 +22,9 @@ function App() {
       <Route path="/" element={<Home/>}></Route>
       <Route path="/movie/create" element={<CreateMovie/>}/>
       <Route path="/movie/popular" element={<Popular/>} />
-      <Route path="/movie/now" element={<NowPlayingMovie></NowPlayingMovie>}/>
-      <Route path="/movie/top" element={<TopRated/>}/>
+      <Route path="/movie/now" element={<NowPlayingMovie/>} />
+      <Route path="/movie/top" element={<TopRated/>} />
+      <Route path="/movie/:id" element={<Detail/>}/>
     </Routes>
 </Layout>
 </ThemeProvider>
