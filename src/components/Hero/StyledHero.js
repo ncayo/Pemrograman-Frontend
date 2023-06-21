@@ -12,6 +12,7 @@ section {
 
 div{
     margin-bottom: 1rem;
+    padding: 1rem;
 }
 
 h2{
@@ -28,7 +29,7 @@ h3{
 
 p{
     color: #64748b;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     
 }
 
@@ -67,7 +68,7 @@ a {
   }
 
   div {
-    flex-basis: 30%;
+    flex-basis: 60%;
   }
 `;
 

@@ -24,7 +24,7 @@ function Popular(){
     return(
         <>
         <Hero/>
-        <Movies movies={movies}/>
+        <Movies title="Popular" movies={movies}/>
         </>
     );
 }

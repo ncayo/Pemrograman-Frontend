@@ -3,10 +3,19 @@ import { useState } from "react";
 import styles from "./AddMovieForm.module.css"
 import Alert from "../Alert/Alert";
 import Button from "../ui/Button";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addMovie } from "../../features/moviesSlice";
 
 // Menangkap props
-function AddMovieForm(props){ 
-const {movies, setMovies} = props; 
+function AddMovieForm(){ 
+// const {movies, setMovies} = props; 
+
+// Buat dispatch
+const dispatch = useDispatch();
+
+// Buat navigasi
+const navigation = useNavigate();
 
 // membuat state object
 const [formData, setFormData]= useState({
@@ -63,7 +72,7 @@ function validate(){
   return true;
 }
 
-function addMovie(){
+function submitMovie(){
   const movie = { 
     id : nanoid(), 
     title :title, 
@@ -71,15 +80,17 @@ function addMovie(){
     type : type, 
     poster : poster, 
     }; 
-    // console.log(newMovie); 
-    setMovies([...movies, movie]); 
+ 
+    dispatch(addMovie(movie))
+
+    navigation("/");
 }
 
 function handleSubmit(e){ 
   // supaya data yang disubmit tidak ter refresh 
   e.preventDefault(); 
 
-  validate() && addMovie()
+  validate() && submitMovie()
   } 
     return(
         <div className={styles.container}>
